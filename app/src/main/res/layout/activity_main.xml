@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:title=""
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:popupTheme="@style/MainMenu">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/profile_image"/>
+            <TextView
+                android:id="@+id/username"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="#fff"
+                android:layout_marginLeft="25dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_layout"
+            app:tabTextColor="#badc57"
+            app:tabIndicatorColor="#F4C724"
+            app:tabSelectedTextColor="#BB2CD9"
+            app:tabRippleColor="#FF3E4D"
+            android:background="#00CCCD"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+
+        />
+
+
+
+</LinearLayout>
