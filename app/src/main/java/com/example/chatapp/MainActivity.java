@@ -43,20 +43,16 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
 
         tabLayout=findViewById(R.id.tab_layout);
         viewPager=findViewById(R.id.viewPager);
-
-
         username=findViewById(R.id.username);
         profile_image =findViewById(R.id.profile_image);
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
